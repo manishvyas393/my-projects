@@ -1,27 +1,24 @@
+
 body{
     background-color:rgb(51, 49, 49) ;
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(10px);
-    min-height: 100vh;
-    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    }
     
-  
-}
 
 .container{
     display: flex;
     flex-direction: column;
     background-color: rgb(36, 36, 36);
     margin:10% 40%;
-    
-    height:50vh;
-    padding-top: 20px;
+    height:auto;
+    padding: 20px 5px;
     justify-content: center;
     border-radius: 20px;
     text-align: center;
     box-shadow: -46px 18px 44px 6px rgba(63, 62, 62, 0.75);
-    
     }
 .cover{
     display: flex;
@@ -95,12 +92,17 @@ body{
 #pause,#stop{
     display: none;
 }
+#pause{
+    color:rgb(2, 255, 171)
+}
 button{
     background-color: transparent;
     border: none;
     font-size: 28px;
     color: beige;
+    transition: width 2s;
 }
+
 #musiclist,#stop{
     font-size:20px;
     margin-top: 10px;
@@ -111,18 +113,29 @@ button{
     justify-content: center;
     text-align: center;
 }
+
 #listholder{
     display: none;
 }
 .list{
     display: flex;
     flex-direction: row;
+    background-color: aqua;
+    margin-bottom: 2px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
 }
 .list img{
     height:40px;
     width:40px;
+    margin:5px 10px;
+    border-radius: 50%;
 }
-.list audio{
-    height:40px;
-color: antiquewhite;
+.names{
+    font-size: 18px;
+    color: antiquewhite;
+    text-transform: capitalize;
+    margin-left: 10px;
+    text-align: center;
 }

@@ -21,9 +21,24 @@ let songlist = [
 let divtag = document.querySelector("#listholder");
 
 for (var i = 0; i < songlist.length; i++) {
-    let html = `<div class="list">
-        <img src="images/${songlist[i].img}"></img>
-        <span>${songlist[i].name}</span>
-        </div>`;
+    let html = `<div class="list" div-index="${i}">
+                    <img src="images/${songlist[i].img}"></img>
+                    <span class="names">${songlist[i].name}</span>
+                    <audio class="audio2" src="playlist/${songlist[i].song}"> </audio>
+                </div>`;
     divtag.insertAdjacentHTML("beforeend", html);
-};
+}
+let alldivtag = divtag.querySelectorAll("div");
+for (var j = 0; j < alldivtag.length; j++) {
+    alldivtag[j].setAttribute("onclick", "songclicked(this)");
+}
+function songclicked(element) {
+    var getdivindex = element.getAttribute("div-index");
+    index = getdivindex;
+    loadmusic(index);
+    play.style.display = "none";
+    pause.style.display = "block";
+    stopped.style.display = "block";
+    progressed.style.display = "block";
+
+}

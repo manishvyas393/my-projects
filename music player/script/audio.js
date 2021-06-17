@@ -24,7 +24,7 @@ function loadmusic(index) {
     music.src = `playlist/${songlist[index].song}`;
 }
 /*play music */
-play.onclick = function (e) {
+play.onclick = function () {
     music.play();
     play.style.display = "none";
     pause.style.display = "block";

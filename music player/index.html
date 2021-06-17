@@ -5,56 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="audio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="images\icon.jpg" type="image">
+    <title>music player</title>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
+
+
         <div class="container">
-            <!---music image-->
-            <div class="cover">
-                <img src="" id="cover" alt="">
-                <span id="name"></span>
-            </div>
-
-            <!---time and progress bar-->
-            <div class="wrap">
-                <span id="cur">00:00</span>
-                <div id="progress-bar">
-                    <div id="progressed"></div>
-                </div>
-                <span id="dura">00:00</span>
-            </div>
-
-            <!---music-->
-            <div class="player">
-                <audio id="music" src="" type="audio/mpeg"> </audio>
-            </div>
-
-            <!---music controls buttons-->
-            <div class="controls">
-                <button id="prev" class="fas fa-backward"></button>
-                <button id="play" class="fas fa-play"></button>
-                <button id="pause" class="fas fa-pause"></button>
-                <button id="next" class="fas fa-forward"></button>
-            </div>
-
-            <!---stop and list for music-->
-            <div class="stop">
-                <button id="stop" class="fas fa-stop"></button>
-                <button id="musiclist" class="fas fa-list"></button>
-            </div>
             <div id="listholder">
+
+                <!--playlist-->
+            </div>
+
+            <div class="musicplayer">
+                <!---music image-->
+                <div class="cover">
+                    <img src="" id="cover" alt="">
+                    <span id="name"></span>
+                </div>
+
+                <!---time and progress bar-->
+                <div class="wrap">
+                    <span id="cur">00:00</span>
+                    <div id="progress-bar">
+                        <div id="progressed"></div>
+                    </div>
+                    <span id="dura">00:00</span>
+                </div>
+
+                <!---music-->
+                <div class="player">
+                    <audio id="music" src="" type="audio/mpeg" autoplay> </audio>
+                </div>
+
+                <!---music controls buttons-->
+                <div class="controls">
+                    <button id="prev" class="fas fa-backward"></button>
+                    <button id="play" class="fas fa-play"></button>
+                    <button id="pause" class="fas fa-pause"></button>
+                    <button id="next" class="fas fa-forward"></button>
+                </div>
+
+                <!---stop and list for music-->
+                <div class="stop">
+                    <button id="stop" class="fas fa-stop"></button>
+                    <button id="musiclist" class="fas fa-list"></button>
+                </div>
             </div>
 
 
+            <!--playlist container-->
         </div>
+
     </div>
 
     <script src="script\audio.js"> </script>
