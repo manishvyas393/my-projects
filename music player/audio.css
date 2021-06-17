@@ -1,0 +1,128 @@
+body{
+    background-color:rgb(51, 49, 49) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    min-height: 100vh;
+    width: 100%;
+    
+  
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 36, 36);
+    margin:10% 40%;
+    
+    height:50vh;
+    padding-top: 20px;
+    justify-content: center;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: -46px 18px 44px 6px rgba(63, 62, 62, 0.75);
+    
+    }
+.cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cover img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    
+    padding: 10px;
+}
+.cover span{
+    margin-top: 5px;
+ font-size: 20px;
+ text-transform: capitalize;
+ font-weight: bold;
+ color: beige;
+
+
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+#progress-bar{
+    position: relative;
+    width:50%;
+    background-color:rgb(214, 214, 214);
+    height: 6px;
+    margin-top: 4px;
+ border-radius: 5px;
+ 
+    }
+#progressed{
+    position: absolute;
+    max-width: 100%;
+    height: 6px;
+    margin:0px 2px;
+    transition: all 1s;
+    display: none;
+    border-radius: 5px;
+    background-color: rgb(2, 255, 171);
+   
+}
+.wrap span{
+    display: inline-block;
+    font-size:14px;
+    margin: 0 5px;
+    color:burlywood
+}
+.player
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#next,#prev{
+    margin:0px 20px;
+}
+
+#pause,#stop{
+    display: none;
+}
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    color: beige;
+}
+#musiclist,#stop{
+    font-size:20px;
+    margin-top: 10px;
+}
+.stop{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+}
+#listholder{
+    display: none;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+}
+.list img{
+    height:40px;
+    width:40px;
+}
+.list audio{
+    height:40px;
+color: antiquewhite;
+}
