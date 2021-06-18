@@ -1,0 +1,95 @@
+*{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(155, 155, 155);
+    height:auto;
+    border-radius: 50px;
+justify-content: center;
+   text-align: center;
+}
+#listholder{
+    width: 100%;
+    background-color:rgb(82, 79, 79);
+    margin-right: 10px;
+    background-color: grey;
+    padding: 2px 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+}
+.list{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+.list img{
+    height:40px;
+    width:40px;
+    margin:5px 10px;
+    border-radius: 50%;
+}
+.musicplayer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px;
+    text-transform: capitalize;
+}
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.cover img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.timer
+{
+    display: flex;
+    justify-content: center;
+
+}
+.player{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.controls,.controls2{
+    display: flex;
+    justify-content: space-evenly;
+}
+.controls button{
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+}
+#pause{
+    display: none;
+}
+#repeat,#stop,#musiclist{
+    background: transparent;
+    border: none;
+    font-size: 28px;
+}
+.progress-bar{
+    display: block;
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+}

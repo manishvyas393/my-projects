@@ -10,13 +10,21 @@ var next = document.getElementById('next');
 var previous = document.getElementById('prev');
 var listdisplay = document.getElementById('musiclist');
 var listcontainer = document.getElementById('listholder');
-
-
-let index = 0;
+var reapeatbtn = document.getElementById('repeat');
 
 window.addEventListener('load', function (e) {
     loadmusic(index);
+    play.setAttribute("onclick", "playmusic()");
+    pause.setAttribute("onclick", "pausemusic()");
+    next.setAttribute("onclick", "nextmusic()");
+    previous.setAttribute("onclick", "prevmusic()");
+    stopped.setAttribute("onclick", "stopmusic()");
+    listdisplay.setAttribute("onclick", "musiclist()");
+    reapeatbtn.setAttribute("onclick", "loopsong()");
+
 });
+
+let index = 0;
 /*load music */
 function loadmusic(index) {
     musicname.innerText = songlist[index].name;
@@ -24,7 +32,7 @@ function loadmusic(index) {
     music.src = `playlist/${songlist[index].song}`;
 }
 /*play music */
-play.onclick = function () {
+function playmusic() {
     music.play();
     play.style.display = "none";
     pause.style.display = "block";
@@ -32,7 +40,7 @@ play.onclick = function () {
     progressed.style.display = "block";
 }
 /*pause music */
-pause.onclick = function (e) {
+function pausemusic() {
     music.pause();
     pause.style.display = "none";
     play.style.display = "block"
@@ -40,7 +48,7 @@ pause.onclick = function (e) {
     progressed.style.display = "block";
 }
 /*change music */
-next.onclick = function () {
+function nextmusic() {
     index++;
     loadmusic(index);
     music.play();
@@ -50,7 +58,7 @@ next.onclick = function () {
     progressed.style.display = "block";
 }
 /*play previous  music */
-previous.onclick = function () {
+function prevmusic() {
     index--;
     loadmusic(index);
     music.play();
@@ -61,7 +69,7 @@ previous.onclick = function () {
 
 }
 /*stop music */
-stopped.onclick = function () {
+function stopmusic() {
     music.currentTime = 0;
     music.pause();
     pause.style.display = "none";
@@ -69,7 +77,7 @@ stopped.onclick = function () {
     stopped.style.display = "none";
 }
 /*display songlist */
-listdisplay.onclick = function () {
+function musiclist() {
     if (listcontainer.style.display == "none") {
         listcontainer.style.display = "block";
     }
@@ -106,8 +114,6 @@ music.ontimeupdate = function (e) {
         cursec = '0' + parseInt(cursec);
     }
     document.getElementById('cur').innerText = curmins + ":" + cursec;
-
-
 }
 /*forward music */
 progressbar.onclick = function (e) {
