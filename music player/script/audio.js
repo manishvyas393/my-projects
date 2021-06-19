@@ -27,7 +27,7 @@ window.addEventListener('load', function (e) {
 let index = 0;
 /*load music */
 function loadmusic(index) {
-    musicname.innerText = songlist[index].name;
+    musicname.innerText = `${songlist[index].name}`;
     musicimg.src = `images/${songlist[index].img}`;
     music.src = `playlist/${songlist[index].song}`;
 }
@@ -93,7 +93,7 @@ music.onloadeddata = function () {
     if (mins < 10) {
         mins = '0' + (mins);
     }
-    if (sec % 10) {
+    if (sec < 10) {
         sec = '0' + (sec);
     }
     document.getElementById('dura').innerText = `${mins}:${sec}`;

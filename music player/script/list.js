@@ -1,7 +1,6 @@
 let songlist = [
     {
         id: "one",
-        singer: "Kamal Kahlon, Param Singh",
         name: "daaru badnaam",
         img: "daaru badnaam.jpg",
         song: "daaru badnam.mp3"
@@ -9,26 +8,55 @@ let songlist = [
 
     {
         id: "two",
-        singer: "sonu nigam",
         name: "Yeh dil dewaana",
         img: "yeh dil dewaana.jpg",
-        song: "Yeh Dil Deewana.mp3"
+        song: "Yeh Dil Deewana.mp3",
     },
     {
         id: "three",
-        singer: "jass manak",
         name: "Jee ni karda",
         img: "jee ni karda.jpg",
-        song: "Jee Ni Karda.mp3"
+        song: "Jee Ni Karda.mp3",
     },
     {
         id: "four",
-        singer: "mohit chahuhan",
         name: "saadda haq",
         img: "rockstar.jpg",
         song: "Saadda Haq.mp3"
     },
+    {
+        id: "five",
+        name: "butterfly",
+        img: "butterfly.jpg",
+        song: "Butterfly.mp3",
+    },
+    {
+        id: "six",
+        name: "zaalima",
+        img: "zaalima.jpg",
+        song: "Zaalima.mp3",
+    },
+    {
+        id: "seven",
+        name: "no competition",
+        img: "no competition.jpg",
+        song: "No Competition.mp3",
+    },
+
 ];
+songlist.sort(function (a, b) {
+    var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+        return -1;
+    }
+    if (nameA > nameB) {
+        return 1;
+    }
+
+    // names must be equal
+    return 0;
+});
 
 
 let divtag = document.querySelector("#listholder");
@@ -43,7 +71,7 @@ for (var i = 0; i < songlist.length; i++) {
                             <audio class="${songlist[i].id}" src="playlist/${songlist[i].song}"> </audio>
                            <span class="totaltime" id="${songlist[i].id}">00:00</span>
                     </div>
-                    <div class="border"></div>
+
                 </div>
                 `;
     divtag.insertAdjacentHTML("beforeend", html);
@@ -58,7 +86,7 @@ for (var i = 0; i < songlist.length; i++) {
         if (mins < 10) {
             mins = '0' + (mins);
         }
-        if (sec % 10) {
+        if (sec < 10) {
             sec = '0' + (sec);
         }
         songduration.innerText = `${mins}:${sec}`;

@@ -9,8 +9,13 @@ body{
 {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+h1{
+color:rgb(2, 255, 171);
+font-size:50px;
 }
 
 .container{
@@ -128,17 +133,23 @@ text-align: center;
 
 #listholder{
     display: none;
-    border-radius: 50px;
+    
     margin-top: 5px;
+    margin-left: 10px;
+    height: 30vh;
     width: 100%;
+    
+    overflow-y: scroll;
 }
 .list{
     display: flex;
     flex-direction: row;
     margin-bottom: 2px;
+    padding-right: 5px;
     justify-items: center;
     align-items: center;
     text-align: center;
+    border-bottom: 2px solid rgb(95, 93, 93);
 }
 .list img{
     height:40px;
@@ -189,7 +200,28 @@ color:red;
     margin-left: 20px;
     text-align: end;
 }
-.border{
-    margin:10px -5px;
-    border-bottom: 2px solid beige;;
-}
+::-webkit-scrollbar {
+    width: 20px;
+    height: 30vhs;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(95, 93, 93); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(95, 93, 93); 
+  }
+
+.playing{
+    color:rgb(2, 255, 171);
+  }
