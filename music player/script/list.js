@@ -42,6 +42,13 @@ let songlist = [
         img: "no competition.jpg",
         song: "No Competition.mp3",
     },
+    {
+        id: "eight",
+        name: "nain",
+        img: "nain.jpg",
+        song: "Nain.mp3",
+    },
+
 
 ];
 songlist.sort(function (a, b) {
