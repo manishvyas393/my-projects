@@ -1,0 +1,41 @@
+body{
+margin: 0;
+padding: 0;
+background-image: url("MIUI9_wallpaper_05.png");
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+.keys{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+
+}
+.key{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 18px;
+    background:transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    color:black;
+    font-size: 16px;
+    transition: all .9s;
+
+}
+kbd,span{
+    display: block;
+}
+.playing{
+  border: red 2px solid;
+  border-radius: 5px;
+  padding: 50px;
+  overflow: hidden;
+  transform: scale(1.1);
+}
