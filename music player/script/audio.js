@@ -30,6 +30,7 @@ function loadmusic(index) {
     musicname.innerText = `${songlist[index].name}`;
     musicimg.src = `images/${songlist[index].img}`;
     music.src = `playlist/${songlist[index].song}`;
+    console.log(`${songlist[index].name}`);
 }
 /*play music */
 function playmusic() {

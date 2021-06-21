@@ -57,8 +57,6 @@ songlist.sort(function (a, b) {
     // names must be equal
     return 0;
 });
-
-
 let divtag = document.querySelector("#listholder");
 
 for (var i = 0; i < songlist.length; i++) {
@@ -97,9 +95,10 @@ for (var j = 0; j < alldivtag.length; j++) {
     alldivtag[j].setAttribute("onclick", "songclicked(this)");
 }
 function songclicked(element) {
-    var getdivindex = element.getAttribute("div-index");
+    var getdivindex = element.getAttribute("div-index");;
     index = getdivindex;
     loadmusic(index);
+    playmusic();
     play.style.display = "none";
     pause.style.display = "block";
     stopped.style.display = "block";
