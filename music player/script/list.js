@@ -142,7 +142,8 @@ music.addEventListener("ended", () => {
         case "repeat_one":
             music.currentTime = 0;
             loadmusic(index);
-            break;
+            playmusic();
+             break;
 
         case "shuffle":
             let randindex = Math.floor((Math.random() * songlist.length) + 1);
